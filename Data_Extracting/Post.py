@@ -1,6 +1,5 @@
+#!/usr/bin/env python
 class Post:
-
-
 
     def __init__(self, title,language,body_text, site):
         self.title=title
