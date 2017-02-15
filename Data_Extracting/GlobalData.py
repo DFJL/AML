@@ -1,1 +1,2 @@
-API_KEY="742c6bef-8c0c-4b44-90a3-2d68f982b166"
+#Key from Webhose user:
+API_KEY="1dfd4505-f6bc-410e-9ee7-2dff661dae6"

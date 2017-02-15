@@ -1,17 +1,36 @@
-import webhose #API Webhose
+#!/usr/bin/env python
 
-API_KEY="742c6bef-8c0c-4b44-90a3-2d68f982b166"
-# Key proporcionada por WebHouse
-class Search:
+import unittest
+import os
+import webhose
+import time
+API_KEY="1dfd4505-f6bc-410e-9ee7-2dff661dae66"
 
+class NextTestCase():
     def __init__(self):
         webhose.config(token=API_KEY)
 
-    def NextSearch(self, input):
-         r = webhose.search( input )
-         print r.total
+    def test_next(self, input):
 
-         for post in r:
-             print post.language
-             print post.title
-             r = r.get_next()
+        r = webhose.search(input)
+        print r.total
+        while True:
+            i=0
+            for post in r:
+                i+=1
+                print i
+                print post.title #Post Title
+                print post.text # Post body text
+                print post.language # Post language
+                print post.url # Post URL
+                print post.author # Post Autor
+                print post.rating
+
+                time.sleep(15)
+            #r = r.get_next()
+
+
+
+if __name__ == "__main__":
+    Test= NextTestCase()
+    Test.test_next("WEED")
