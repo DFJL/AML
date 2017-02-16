@@ -3,30 +3,36 @@ import unittest
 import os
 import webhose
 import time
-API_KEY="1dfd4505-f6bc-410e-9ee7-2dff661dae66"
+import Post
+import GlobalData
 
 class NextTestCase():
     def __init__(self):
-        webhose.config(token=API_KEY)
+        webhose.config(token=GlobalData.API_KEY)
+
 
     def test_next(self, input):
 
         r = webhose.search(input)
         print r.total
-        while True:
-            i=0
-            for post in r:
-                i+=1
-                print i
-                print post.title #Post Title
-                print post.text # Post body text
-                print post.language # Post language
-                print post.url # Post URL
-                print post.author # Post Autor
-                print post.rating
+        i=0
+        for post in r:
+            i=i+1
+            print i
+            title = post.title #Post Title
+            body_text = post.text # Post body text
+            language = post.language # Post language
+            url = post.url # Post URL
+            Test = Post.Post(title,language,body_text,url)
 
-                time.sleep(15)
-            #r = r.get_next()
+            print Test
+            print post.author # Post Autor
+            print post.rating
+            print post.external_links
+            print post.crawled
+            print post.published
+            time.sleep(0.55)
+
 
 
 

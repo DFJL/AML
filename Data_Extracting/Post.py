@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env pyh
+import codecs
 class Post:
 
     def __init__(self, title,language,body_text, site):
@@ -8,4 +9,4 @@ class Post:
         self.language=language
 
     def __str__(self):
-        return "Title : %s  , Language : %s , Body Text : %s  " % ( self.title, self.language , self.body_text)
+        return "\n Title : %s  , \n Language : %s , \n Site : %s  , \n Body text : %s " % ( self.title.encode('utf-8'), self.language.encode('utf-8') , self.site.encode('utf-8') , self.body_text.encode('utf-8'))
