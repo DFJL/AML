@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import unittest
 import os
 import webhose
@@ -31,6 +30,3 @@ class NextTestCase():
 
 
 
-if __name__ == "__main__":
-    Test= NextTestCase()
-    Test.test_next("WEED")
