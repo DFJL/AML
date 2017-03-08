@@ -1,6 +1,6 @@
 spanish_words: ['Lavado de activos', 'terrorismo', 'mafia', 'mariguana',
 'contrabando', 'fraude','corrupcion' ,'cartel', 'cocaina','evasión de impuestos',
-'droga','malvestacion de fondos','crimen organizado', 'lavado de dinero',
+'droga','malversacion de fondos','crimen organizado', 'lavado de dinero',
 'trata de personas','pitufeo','blanqueo capitales','narcotrafico','explotación sexual',
 'decomiso','fraude fiscal']
 english_words: ['Money Laundering', 'terrorism', 'marihuana', 'fraud',
